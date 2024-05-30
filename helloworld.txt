@@ -1,2 +1,21 @@
-헤헿
-fdsagdsag2w
+from tkinter import *
+import matplotlib.pyplot as plt
+
+window = Tk()
+
+window.title("수강 꾸러미 차트")
+window.geometry("500x600+10+10")
+
+lb1 = Label(window, text="신청 인원")
+lb2 = Label(window, text="총 정원: 10")
+lb1.pack()
+lb2.pack()
+
+X = [7,3]
+labels=["수강꾸러미 신청인원", "수강꾸러미 남은인원"]
+explode = [0,0.1]
+colors = ["r","b"]
+plt.pie(X, labels=labels, explode = explode, colors=colors)
+plt.show()
+
+window.mainloop()
